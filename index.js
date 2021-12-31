@@ -1,13 +1,32 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  if (word.length <= 1) {
+    return true;
+  } else {
+    if (word[0] === word[word.length - 1]) {
+      return isPalindrome(word.slice(1, -1));
+    } else {
+      return false;
+    }
+  }
 }
 
 /* 
   Add your pseudocode here
+   Declare Function 
+   if length is less than 1 return true
+   else
+   if word 0 is strictly equal to the end (-1) 
+   slice out 1 and -1 
+   
+   else 
+   return false
 */
 
 /*
   Add written explanation of your solution here
+  If the word is one letter or less, return true 
+  Else deconstruct the word using splice to compare letters
+  If the letters are not strictly equal return false.
 */
 
 // You can run `node index.js` to view these console logs
